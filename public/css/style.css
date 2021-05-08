@@ -285,7 +285,7 @@ figure {
       z-index: 9; }
       #colorlib-hero .flexslider .slider-text > .slider-text-inner {
         display: table-cell;
-        vertical-align: middle;
+        vertical-align: top;
         min-height: 700px;
         padding: 2.5em;
         position: relative; }

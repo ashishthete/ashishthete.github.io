@@ -21,7 +21,7 @@ export default class Timeline extends Component {
                         <i className="icon-pen2" />
                       </div>
                       <div className="timeline-label">
-                        <h2>Senior Software Engineer <span>2020-present</span></h2>
+                        <h2>Senior Software Engineer <span>2020-present (Mobisoft Infotech)</span></h2>
                         <p>I recently have joined the Mobisoft Infotech as a Senior Software Engineer. My major part of the work has been into the field of developing backend server using golang.</p>
                       </div>
                     </div>
@@ -32,7 +32,7 @@ export default class Timeline extends Component {
                         <i className="icon-pen2" />
                       </div>
                       <div className="timeline-label">
-                        <h2>Software Developer at KOPERA<span>2014-2010</span></h2>
+                        <h2>Senior Software Engineer <span>2014-2010 (KOPERA)</span></h2>
                         <p>
                             I joined kopera as Intern in Jan 14. Where i worked on multiple technology stack. Majorly i am part of development on domains like Embedded Systems, Health Care systems, IOT Devices, WEBRTC, high-end audio and video systems, camera systems, conferencing system, smart house solution etc .
                         </p>
