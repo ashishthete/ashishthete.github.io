@@ -1,6 +1,46 @@
 import React, { Component } from 'react'
 
+import Entry from './Entry';
+import EmptyEntry from './EmptyEntry';
+
 export default class Timeline extends Component {
+  constructor() {
+    super()
+    this.timelineEntries = [
+      {
+        "title": "Senior Software Engineer",
+        "time": "2020-present (Mobisoft Infotech)",
+        "description": "I recently have joined the Mobisoft Infotech as a Senior Software Engineer. My major part of the work has been into the field of developing backend server using golang."
+      },
+      {
+        "title": "Senior Software Engineer",
+        "time": "2014-2010 (KOPERA)",
+        "description": "I joined kopera as Intern in Jan 14. Where i worked on multiple technology stack. Majorly i am part of development on domains like Embedded Systems, Health Care systems, IOT Devices, WEBRTC, high-end audio and video systems, camera systems, conferencing system, smart house solution etc ."
+      },
+      {
+        "title": "Master In Computer science",
+        "time": "2012 - 2014",
+        "description": "I have pursued my post graduation in Computer science from Modern College, Pune."
+      },
+      {
+        "title": "Bachelor In Computer Science",
+        "time": "2009 - 2012",
+        "description": "I Completed my graduation in computer science from Padmashri Vikhe Patil College, Pravaranagar."
+      }
+    ];
+
+    this.colours = [
+      'color-2',
+      'color-3',
+      'color-4'
+    ];
+    console.log(this.colours[0 % 3]);
+    console.log(this.colours[1 % 3]);
+    console.log(this.colours[2 % 3]);
+    console.log(this.colours[3 % 3]);
+  }
+
+
   render() {
     return (
       <div>
@@ -12,61 +52,14 @@ export default class Timeline extends Component {
                 <h2 className="colorlib-heading animate-box">Timeline</h2>
               </div>
             </div>
+
             <div className="row">
               <div className="col-md-12">
                 <div className="timeline-centered">
-                  <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                    <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-3">
-                        <i className="icon-pen2" />
-                      </div>
-                      <div className="timeline-label">
-                        <h2>Senior Software Engineer <span>2020-present (Mobisoft Infotech)</span></h2>
-                        <p>I recently have joined the Mobisoft Infotech as a Senior Software Engineer. My major part of the work has been into the field of developing backend server using golang.</p>
-                      </div>
-                    </div>
-                  </article>
-                  <article className="timeline-entry animate-box" data-animate-effect="fadeInTop">
-                    <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-4">
-                        <i className="icon-pen2" />
-                      </div>
-                      <div className="timeline-label">
-                        <h2>Senior Software Engineer <span>2014-2010 (KOPERA)</span></h2>
-                        <p>
-                            I joined kopera as Intern in Jan 14. Where i worked on multiple technology stack. Majorly i am part of development on domains like Embedded Systems, Health Care systems, IOT Devices, WEBRTC, high-end audio and video systems, camera systems, conferencing system, smart house solution etc .
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                  <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                    <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-5">
-                        <i className="icon-pen2" />
-                      </div>
-                      <div className="timeline-label">
-                        <h2>Master In Computer science <span>2012 - 2014</span></h2>
-                        <p>I have pursued my post graduation in Computer science from Modern College, Pune.</p> 
-                      </div>
-                    </div>
-                  </article>
-                  <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                    <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-5">
-                        <i className="icon-pen2" />
-                      </div>
-                      <div className="timeline-label">
-                        <h2>Bachelor In Computer Science <span>2009 - 2012</span></h2>
-                        <p>I Completed my graduation in computer science from Padmashri Vikhe Patil College, Pravaranagar.</p> 
-                      </div>
-                    </div>
-                  </article>
-                  <article className="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-                    <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-none">
-                      </div>
-                    </div>
-                  </article>
+                  {this.timelineEntries.map((value, index) => {
+                    return <Entry key={index} entry={value} colour={this.colours[index % 3]}/>
+                  })}
+                  <EmptyEntry/>
                 </div>
               </div>
             </div>
